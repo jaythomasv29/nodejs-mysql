@@ -75,7 +75,12 @@ function sellProducts() {
             if (error) throw error;
             console.log('Congrats, successful purchase...');
         });
+        let query2 = 'SELECT price FROM products WHERE id = ?;';
+        connection.query(query2, [prod], function (error, results, fields) {
+            if (error) throw error;
+            console.log('Your total is ' + results[0].price * quant);
         connection.end();
+        });
 
     })
     // create a sql connection to query if there is enough quantity
