@@ -19,6 +19,5 @@
 * Node packages:
     * MySQL
     * Inquirer
-    * Express
 * Git
 * GitHub
